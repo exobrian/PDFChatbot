@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Login | {{ app_name }}</title>
+</head>
+<body class="auth-body">
+    <div class="auth-card">
+        <h2>{{ app_name }}</h2>
+        <div class="tabs">
+            <button onclick="showTab('login')" class="tab-btn active" id="btn-login">Login</button>
+            <button onclick="showTab('signup')" class="tab-btn" id="btn-signup">Sign Up</button>
+        </div>
+        
+        <div id="login-form">
+            <input type="email" id="l-email" placeholder="Email Address">
+            <input type="password" id="l-password" placeholder="Password">
+            <button onclick="authAction('login')" class="action-btn">Enter Workspace</button>
+        </div>
+
+        <div id="signup-form" style="display:none;">
+            <input type="text" id="s-username" placeholder="Username">
+            <input type="email" id="s-email" placeholder="Email Address">
+            <input type="password" id="s-password" placeholder="Password">
+            <button onclick="authAction('register')" class="action-btn">Create Free Account</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>

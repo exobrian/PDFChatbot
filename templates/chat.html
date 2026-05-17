@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Dashboard | {{ app_name }}</title>
+</head>
+<body>
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <h2>{{ app_name }}</h2>
+            <div class="user-profile">Active user: <b>{{ username }}</b></div>
+            
+            <div id="drop-zone" onclick="document.getElementById('pdf-input').click()">
+                <p>Drag & Drop PDF or Click to Browse</p>
+                <input type="file" id="pdf-input" hidden accept=".pdf" onchange="uploadPDF(this.files)">
+            </div>
+            <div id="file-status">No file active</div>
+            
+            <a href="/logout" class="logout-link">Logout Account</a>
+        </aside>
+
+        <main class="chat-container">
+            <div id="chat-window"></div>
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Ask a question about the document...">
+                <button onclick="sendChatMessage()">Send Message</button>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

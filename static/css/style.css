@@ -1,0 +1,32 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f6fa; color: #2f3640; }
+
+/* Auth Layouts */
+.auth-body { display: flex; align-items: center; justify-content: center; height: 100vh; background: #dcdde1; }
+.auth-card { background: #ffffff; width: 400px; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+.auth-card h2 { margin-bottom: 20px; color: #2c3e50; font-weight: 600; }
+.tabs { display: flex; margin-bottom: 20px; border-bottom: 1px solid #dcdde1; }
+.tab-btn { flex: 1; padding: 10px; border: none; background: none; cursor: pointer; font-size: 14px; color: #7f8c8d; }
+.tab-btn.active { color: #2980b9; border-bottom: 2px solid #2980b9; font-weight: bold; }
+input { width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+.action-btn { width: 100%; padding: 12px; background: #2980b9; border: none; color: white; font-weight: bold; border-radius: 4px; cursor: pointer; }
+
+/* Main App Workspaces */
+.app-wrapper { display: flex; height: 100vh; }
+.sidebar { width: 280px; background: #2c3e50; color: #ffffff; padding: 25px; display: flex; flex-direction: column; gap: 20px; }
+.sidebar h2 { font-size: 22px; color: #3498db; }
+.user-profile { font-size: 14px; border-bottom: 1px solid #34495e; padding-bottom: 10px; }
+#drop-zone { border: 2px dashed #3498db; padding: 30px 15px; text-align: center; border-radius: 6px; cursor: pointer; transition: background 0.2s; }
+#drop-zone:hover { background: rgba(52, 152, 219, 0.1); }
+#file-status { text-align: center; font-size: 13px; color: #bdc3c7; font-style: italic; }
+.logout-link { margin-top: auto; color: #e74c3c; text-decoration: none; font-size: 14px; font-weight: bold; }
+
+/* Real-Time Message Blocks */
+.chat-container { flex: 1; display: flex; flex-direction: column; background: #f5f6fa; }
+#chat-window { flex: 1; padding: 25px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
+.message { padding: 12px 18px; border-radius: 8px; max-width: 75%; font-size: 15px; line-height: 1.5; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.user { align-self: flex-end; background: #2980b9; color: #ffffff; border-bottom-right-radius: 0; }
+.ai { align-self: flex-start; background: #ffffff; border-bottom-left-radius: 0; border: 1px solid #dcdde1; }
+.input-area { padding: 20px; background: #ffffff; display: flex; gap: 15px; border-top: 1px solid #dcdde1; }
+.input-area input { flex: 1; margin-bottom: 0; }
+.input-area button { padding: 0 25px; background: #2980b9; border: none; color: white; font-weight: bold; border-radius: 4px; cursor: pointer; }
