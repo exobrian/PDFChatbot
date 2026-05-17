@@ -1,4 +1,4 @@
-# DocuMind AI - Robust RAG Application
+# PDF Chatbot - Robust RAG Application
 PDF Chatbot is a production-ready, full-stack Retrieval-Augmented Generation (RAG) web application. It allows authenticated users to upload PDF documents, extract their textual content asynchronously, and have contextualized conversations with an AI model based on the uploaded material. 
 
 The application utilizes a decoupled frontend/backend architecture, password cryptography, and a flexible NoSQL database layer for long-term user and chat history persistence.
